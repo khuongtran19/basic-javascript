@@ -87,3 +87,25 @@ arr.fill(50, 1, 3)
 //Expect [1, 50, 50, 4, 5, 6, 7, 8, 9]
 //           |       |
 //          start   end
+
+//FIND
+//Similar to filter find() function will find the item that satisfies the condition. However find only return FIRST element while filter return ALL element.
+//SYNTAX: arr.find(function( element, index, array), thisValue)
+arr.find((item) => item % 2 === 0)
+//Expect 2
+
+//FOREACH
+//This is new ES6 function help we spend less time to code for loop
+//arr.forEach() function calls the provided function once for each element of the array.
+//SYNTAX: arr.forEach(function callback(currentValue[, index[, array]]) { }[, thisArg]);
+arr.forEach((item) => console.log(item + 3))
+//Expect 
+//4
+//5
+//6
+//7
+//8
+//9
+//10
+//11
+//12
