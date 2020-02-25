@@ -51,4 +51,17 @@ arr.concat(secArr)
 //FILTER
 //arr.filter() function is used to created a new array from a given array consisting of only those elements from the given array which satisfy a condition set by the argument.
 // SYNTAX: var newArray = arr.filter(arg_function[ , this_arg])
+arr.filter((item) => item % 2 === 0)
+//this filter will find even number in the array
+//Expect [2,4,5,8] 
+
+//INDEXOF
+//array,indexOf() function is used to find the index of the first occurrence of the search element provided as the argument to the function.
+//SYNTAX: arr.indexOf(searchElement[, index])
+arr.indexOf(3)
+//Expect 2 as number 3 locate at index 2
+//[1,2,3,4,5,6,7,8,9] <= given array
+// | | | | | | | | |
+//[0,1,2,3,4,5,6,7,8] <= index of array
+
 
