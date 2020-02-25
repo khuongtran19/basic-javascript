@@ -72,3 +72,10 @@ arr.indexOf(3)
 //return boolean
 arr.some((item) => item > 5)
 //Expect true since in the array there are numbers larger than 5
+
+//JOIN
+//arr.join() used to join the elements of the array together into a string.
+//SYNTAX: array.join([seperator])
+arr.join(" ")
+//Expect [1 2 3 4 5 6 7 8 9]
+//replace the "," with a space " "
