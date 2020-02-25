@@ -109,3 +109,10 @@ arr.forEach((item) => console.log(item + 3))
 //10
 //11
 //12
+//Explaination: As each time the for loop run it add 3 to the number in the array so the console.log will show result in each line
+
+//MAP
+//arr.map() function create a new array with the result of called function for every array element.
+//call newArr as a new array to store new item that came out from function map
+var newArr = arr.map((item) => item * 2)
+//Expect newArr = [ 2, 4, 6, 8, 10, 12, 14, 16, 18]
