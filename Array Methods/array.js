@@ -79,3 +79,11 @@ arr.some((item) => item > 5)
 arr.join(" ")
 //Expect [1 2 3 4 5 6 7 8 9]
 //replace the "," with a space " "
+
+//FILL
+//arr.fill() is used to fill the array with a given static value.
+//SYNTAX: arr.fill(value, start, end)
+arr.fill(50, 1, 3)
+//Expect [1, 50, 50, 4, 5, 6, 7, 8, 9]
+//           |       |
+//          start   end
