@@ -19,7 +19,6 @@ arr.pop()
 //SYNTAX: array.unshift(item1, item2, ...)
 //require parameter
 arr.unshift(0)
-
 //Expect arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 //SHIFT
@@ -44,6 +43,7 @@ arr.splice(3, 0, 4, 5);
 //CONCAT
 //return both the first array and second arr
 //SYNTAX: arr.concat(arr)
+//return array
 var secArr = [10, 11, 12]
 arr.concat(secArr)
 //Expect [1,2,3,4,5,6,7,8,9,10,11,12]
@@ -51,6 +51,7 @@ arr.concat(secArr)
 //FILTER
 //arr.filter() function is used to created a new array from a given array consisting of only those elements from the given array which satisfy a condition set by the argument.
 // SYNTAX: var newArray = arr.filter(arg_function[ , this_arg])
+//return array
 arr.filter((item) => item % 2 === 0)
 //this filter will find even number in the array
 //Expect [2,4,5,8] 
@@ -58,10 +59,16 @@ arr.filter((item) => item % 2 === 0)
 //INDEXOF
 //array,indexOf() function is used to find the index of the first occurrence of the search element provided as the argument to the function.
 //SYNTAX: arr.indexOf(searchElement[, index])
+//return number
 arr.indexOf(3)
 //Expect 2 as number 3 locate at index 2
 //[1,2,3,4,5,6,7,8,9] <= given array
 // | | | | | | | | |
 //[0,1,2,3,4,5,6,7,8] <= index of array
 
-
+//SOME
+//arr.some() function check whether at least one of the elements fo the arrays satisfies the condition checked by the argument function.
+//SYNTAX: arr.some(arg_function(element, index, array), thisArg )
+//return boolean
+arr.some((item) => item > 5)
+//Expect true since in the array there are numbers larger than 5
