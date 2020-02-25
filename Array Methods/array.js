@@ -2,12 +2,15 @@ var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 //PUSH
 //adding element at the end of an Array
+//SYNTAX: array.push(item1, item2, ...)
 arr.push(10)
 //require parameter
 //Expect arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 //POP
 //removing element from the end of an Array
+//SYNTAX: array.pop()
+//no require parameter
 arr.pop()
 //Expect arr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -35,7 +38,12 @@ arr.splice(3, 0, 4, 5);
 
 //CONCAT
 //return both the first array and second arr
+//SYNTAX: arr.concat(arr)
 var secArr = [10, 11, 12]
 arr.concat(secArr)
 //Expect [1,2,3,4,5,6,7,8,9,10,11,12]
+
+//FILTER
+//arr.filter() function is used to created a new array from a given array consisting of only those elements from the given array which satisfy a condition set by the argument.
+// SYNTAX: var newArray = arr.filter(arg_function[ , this_arg])
 
