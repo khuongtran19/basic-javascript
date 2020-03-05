@@ -10,11 +10,38 @@ Math.PI
 
 Math.round()
 // return the value of x rounded to its nearest integer
+// SYNTAX: Math.round(x)
 // Example Math.round(4.7)
 // Expect 5
+// Example Math.round(4.2)
+// Expect 4
 
 Math.pow()
-// SYNTAX: Math.pow(x, y)
 // return the value of x to the power of y
+// SYNTAX: Math.pow(x, y)
 // Example Math.pow(8, 2)
 // Expect 64 as 8^2 = 64
+
+Math.sqrt()
+// return the square root of x
+// SYNTAX: Math.sqrt(x)
+// Example Math.sqrt(64)
+// Expect 8 as sqrt 64 is 8
+
+Math.abs()
+// return the absolute positive value of x
+// SYNTAX: Math.abs(-x)
+// Example Math.abbs(-4.7)
+// Expect 4.7
+
+Math.ceil()
+// return the value of x rounded UP to its nearest integer
+// SYNTAX: Math.ceil(x)
+// Example: Math.ceil(4.4)
+// Expect 5
+
+Math.floor()
+// return the value of x rounded DOWN to its nearest integer
+// SYNTAX: Math.floor(x)
+// Example: Math.ceil(4.7)
+// Expect 4
