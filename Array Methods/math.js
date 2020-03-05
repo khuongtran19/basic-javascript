@@ -45,3 +45,17 @@ Math.floor()
 // SYNTAX: Math.floor(x)
 // Example: Math.ceil(4.7)
 // Expect 4
+
+Math.max()
+Math.min()
+// can be used to find the highest or lowest value in a list of arguments
+// Example: Math.min(0, 150, 30, 20, -8, -200);
+// Expect -200
+// Example: Math.max(0, 150, 30, 20, -8, -200);
+// Expect 150
+
+// TRICK TO USE IN CODING CHALLENGE OR REAL WORLD PROJECT
+// Random integers
+Math.floor(Math.random() * 10);     // returns a random integer from 0 to 9
+Math.floor(Math.random() * 100);     // returns a random integer from 0 to 99
+Math.floor(Math.random() * 10) + 1;  // returns a random integer from 1 to 10
