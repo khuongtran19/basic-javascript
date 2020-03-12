@@ -1,0 +1,26 @@
+ls - stand for list
+    + Show every files or folders in the directory
+
+cd <folder name>
+    + Open directory
+
+cd ..
+    + Go back to previous directory
+
+cd~
+    + Go to original/first directory
+
+rm <file name>/<folder name> - stand for remove
+    + Remove the file/folder
+    ++ "Permission Denied" => when user have no permission to remove the file/folder
+    ++ sudo rm <file name>/<folder name>
+rm -rf 
+    + Remove all files and folders in current directory
+    ++ rm -rf <folder name>
+    ++ Remove everything in specific directory
+
+touch <file name>
+    + Create new file
+
+mkdir <folder name> - stand for make directory
+    + Create new folder
