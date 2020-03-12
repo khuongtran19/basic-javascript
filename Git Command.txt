@@ -37,6 +37,10 @@
     + Switch to different branches
  git checkout <:branch:>
 
+-git fecth
+    + fecth branches and/or tags from one or more other repositories
+ git fecth
+ 
 -git merge
     + Merge two branches you were working on.
  git merge
