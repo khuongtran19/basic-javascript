@@ -1,0 +1,51 @@
+-git add
+    + Add changes to stage/index in your working directory. This only repare all files to send to directory
+ git add .   => to add everything
+
+-git commit
+    + Commit your changes and sets it to new commit object for your remote
+ git commit -m "your message for commit"
+
+-git push
+    + Push your changes to remote. This will send all changes to directory
+ git push <:remote:> <:branch:>
+ git push origin master
+
+-git status
+    + Check the status of files you've changed in your working directory, what changed since your last commit
+ git status
+
+-git init
+    + To initialise a git repository for a new or existing project.
+ git init
+
+-git clone
+    + To copy a git repository from remote source, also set remote to original source so that you can pull again. This most likely when first time work for company and need to clone project to your computer.
+ git clone <:clone git url:>
+
+-git pull
+    + To pull all changed from remote that commit by others. This likely use when others commit code changed to remote git but haven't update in your code.
+ git pull <:remote:> <:branch:>
+ git pull => simply git fecth and git merge.
+ git pull origin master => this will pull everything from master then merge with your code
+
+-git branch
+    + Lists out all the branches
+ git branch or git branch -a to list all the remote branches as well
+
+-git checkout
+    + Switch to different branches
+ git checkout <:branch:>
+
+-git merge
+    + Merge two branches you were working on.
+ git merge
+
+-git reset
+    + You know when you commit changes that are not complete, this sets your index to the latest commit that you want to work on with.
+ git reset <:mode:> <:COMMIT:>
+
+-git remote
+    + To check what remote/source you have or add a new remote.
+ git remote to check and list. And git remote add <:remote_url:>
+
