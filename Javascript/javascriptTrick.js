@@ -19,3 +19,7 @@ cars.sort((a, b) => { return a.year - b.year })
 // Saab 2001
 // BMW 2010
 // Volvo 2016
+
+// if else condition
+// variablename = (condition) ? value1:value2 
+var voteable = (age < 18) ? "Too young" : "Old enough";
