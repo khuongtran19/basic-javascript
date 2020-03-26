@@ -118,3 +118,12 @@ var res = str.substr(1, 4)
 //   | | | |
 // 0 1 2 3 4 5 6 7 8 9 10
 
+// substring()
+// method extracts the characters from a string, between two specified indices, and returns the new sub string.
+// This method extracts the characters in a string between "start" and "end", not including "end" itself.
+// If "start" is greater than "end", this method will swap the two arguments, meaning str.substring(1, 4) == str.substring(4, 1).
+// If either "start" or "end" is less than 0, it is treated as if it were 0.
+// SYNTAX: string.substring(start, end)
+var res = str.substring(1, 4);
+// Expected: ELL
+
