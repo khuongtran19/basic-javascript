@@ -43,3 +43,35 @@ var res = str.match(/ain/g);
 //      ain                 ain            ain
 // the letter must match upper and lower case
 
+// prototype
+// The prototype property allows you to add new properties and methods to existing object types.
+function employee(name, jobtitle, born) {
+    this.name = name;
+    this.jobtitle = jobtitle;
+    this.born = born;
+}
+employee.prototype.salary = 2000;
+
+var fred = new employee("Fred Flintstone", "Caveman", 1970);
+fred.salary
+// Expect: 2000
+// employee {name: "Fred Flintstone", jobtitle: "Caveman", born: 1970}
+// name: "Fred Flintstone"
+// jobtitle: "Caveman"
+// born: 1970
+// __proto__:
+// salary: 2000   <====== 
+// constructor: ƒ employee(name, jobtitle, born)
+// __proto__: Object
+
+// repeat()
+// returns a new string with a specified number of copies of the string it was called on
+// SYNTAX: string.repeat(numberOfTimes)
+str.repeat(2)
+// Expected: HELLO WORLDHELLO WORLD
+
+// replace()
+// search a string for a specified value, or a regualr expression, and returns a new string where the scpecified values are replaced.
+// SYNTAX: string.replace(searchValue, newValue)
+var res = str.replace("WORLD", "ME");
+// Expected: HELLO ME
