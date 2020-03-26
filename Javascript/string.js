@@ -105,3 +105,16 @@ var res = str.split(" ")
 // return true false
 // This medthod returns true if the stirng begins with the characters, and false if not
 var res = str.startsWith("HELLO")
+// Expected: true
+var res = str.startsWith("HI")
+// Expected: false
+
+// substr()
+// method extracts parts of a string, beginning at the character at the specified position, and returns the specified number of characters.
+// SYNTAX: string.substr(start, length)
+var res = str.substr(1, 4)
+// Expected: ELLO
+// H E L L O   W O R L D
+//   | | | |
+// 0 1 2 3 4 5 6 7 8 9 10
+
