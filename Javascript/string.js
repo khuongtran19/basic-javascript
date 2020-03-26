@@ -16,6 +16,7 @@ var res = str.concat(" My name is Kevin")
 // indexOf()
 // return the position of the first occurrence of a specified value in a string
 // this method return -1 if the value to search for never occurs
+// SYNTAX: string.indexOf(value)
 var res = str.indexOf("WORLD")
 // Expected: 6
 // "H E L L O   W O R L D"
@@ -26,6 +27,7 @@ var res = str.indexOf("WORLD")
 // lastIndexOf()
 // return the position of the last occurrence of a specified value in a string
 // This method return -1 if the value to search for never occurs
+// SYNTAX: string.lastIndexOf(value)
 var res = str.lastIndexOf("WORLD")
 // Expected: 6
 
@@ -36,6 +38,7 @@ var res = str.length
 
 // match()
 // method searches a string for a match against a regular expression, and returns the matches, as an Array object
+// SYNTAX: string.match(value // regular expression)
 var str = "The rain in SPAIN stays mainly in the plain";
 var res = str.match(/ain/g);
 // Expected: "ain", "ain", "ain"
@@ -75,3 +78,18 @@ str.repeat(2)
 // SYNTAX: string.replace(searchValue, newValue)
 var res = str.replace("WORLD", "ME");
 // Expected: HELLO ME
+
+// search()
+// search a string for specified value, and returns the position of the match
+// SYNTAX: string.search(searchValue)
+var res = str.search("ELLO")
+// Expected: 1
+// H E L L O   W O R L D
+//   |
+// 0 1 2 3 4 5 6 7 8 9 10
+
+// slice()
+// extracts parts of a string and returns the extracted parts in a new string
+// SYNTAX: string.slice(start, end)
+var res = str.slice(0, 5)
+// Expected: "HELLO "
