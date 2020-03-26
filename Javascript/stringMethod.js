@@ -127,3 +127,29 @@ var res = str.substr(1, 4)
 var res = str.substring(1, 4);
 // Expected: ELL
 
+
+// toLowerCase()
+// converts a string to lowercase letters.
+// SYNTAX: string.toLowerCase()
+var res = str.toLowerCase()
+// Expected: "hello world"
+
+// toString()
+// returns the value of a string object
+// SYNTAX: string.toString()
+var res = str.toString()
+// Expected: hello world
+
+// toUpperCase()
+// converts a string to uppercase letters
+// SYNTAX: string.toUpperCase()
+var str = "hello world"
+var res = str.toUpperCase()
+// Expected: "HELLO WORLD"
+
+// trim()
+// removes whitespace from both sides of a string
+// SYNTAX: string.trim()
+var str = "       Hello World!        ";
+alert(str.trim());
+// Expected: "Hello World"
