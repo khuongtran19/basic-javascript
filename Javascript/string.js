@@ -93,3 +93,15 @@ var res = str.search("ELLO")
 // SYNTAX: string.slice(start, end)
 var res = str.slice(0, 5)
 // Expected: "HELLO "
+
+// split()
+// method is used to split a string into an array of substrings, and returns the new array
+// SYNTAX: string.split(seperator, limit)
+var res = str.split(" ")
+// Expected: HELLO,WORLD
+
+// startsWith()
+// method determines whether a string begins with the characters of a specified string
+// return true false
+// This medthod returns true if the stirng begins with the characters, and false if not
+var res = str.startsWith("HELLO")
