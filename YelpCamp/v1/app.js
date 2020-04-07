@@ -3,7 +3,7 @@ const app = express();
 const dotenv = require("dotenv");
 dotenv.config();
 const port = parseInt(process.env.APP_PORT || 3000)
-app.set("view engine", "ejs")
+app.set('view engine', 'ejs')
 
 app.get("/", (req, res) => {
     res.render("landing")
