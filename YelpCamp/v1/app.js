@@ -1,6 +1,8 @@
 const express = require("express")
 const app = express();
 const dotenv = require("dotenv");
+const bodyParser = require("body-parser")
+app.use(bodyParser.urlencoded({ extended: true }))
 dotenv.config();
 const port = parseInt(process.env.APP_PORT || 3000)
 app.set('view engine', 'ejs')
@@ -17,6 +19,10 @@ app.get("/campgrounds", (req, res) => {
     ]
 
     res.render("campgrounds", { campgrounds: campgrounds })
+})
+
+app.post("/campgrounds", (req, res) => {
+    res.send("YOU HIT THE POST ROUTE")
 })
 
 app.listen(port, () => {
