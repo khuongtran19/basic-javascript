@@ -1,0 +1,14 @@
+To start mongodb from one tab then run
+    mongod
+To start using mongodb, use another tab then run
+    mongo
+To show database
+    show db
+To create to switch to database
+    use <name of database>
+To insert new data to the database
+    db.<name of collection>.insert({<data to insert>})
+To show collections
+    show collections
+To find specific collection
+    db.<name of collection>.find(<any specific information>)
