@@ -6,9 +6,19 @@ To show database
     show db
 To create to switch to database
     use <name of database>
-To insert new data to the database
+To insert new data to the collection
     db.<name of collection>.insert({<data to insert>})
 To show collections
     show collections
 To find specific collection
-    db.<name of collection>.find(<any specific information>)
+    db.<name of collection>.find({<specific information>})
+    
+    db.<name of collection>.find() <= will show everything in collection
+To update 
+    db.<name of collection>.update({<information that need to change>}) <= this will overwrite entire data of that specific data we want to change
+    
+    db.<name of collection>.update({<data need to change>, {$set: {<new data need to change or add>}}})
+To delete
+    db.<name of collection>.remove({<data need to delete>}) <= this will delete everything that have same provided information
+
+    db.<name of colleciton>.remove({<data need to delete>}).limit(<number of times will delete>)
