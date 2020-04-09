@@ -33,7 +33,7 @@ app.get("/campgrounds", (req, res) => {
         if (err) {
             console.log(err)
         } else {
-            res.render("campgrounds", { campgrounds: allCampgrounds })
+            res.render("index.ejs", { campgrounds: allCampgrounds })
         }
     })
 })
@@ -43,9 +43,10 @@ app.get("/campgrounds/news", (req, res) => {
 })
 
 app.post("/campgrounds", (req, res) => {
-    const name = req.body.name;
-    const image = req.body.image;
-    const newCampgrounds = { name: name, image: image }
+    const name = req.body.name,
+        image = req.body.image,
+        description = req.body.description;
+    const newCampgrounds = { name: name, image: image, description: description }
     // Create a new campground and save to DB
     Campground.create(newCampgrounds, (err, newCreateCamp) => {
         if (err) {
@@ -58,7 +59,13 @@ app.post("/campgrounds", (req, res) => {
 })
 
 app.get("/campgrounds/:id", (req, res) => {
-    res.send("got it")
+    Campground.findById(req.params.id, (err, foundCampground) => {
+        if (err) {
+            console.log(err)
+        } else {
+            res.render("show", { campground: foundCampground })
+        }
+    })
 })
 
 app.listen(port, () => {
