@@ -16,7 +16,8 @@ app.set('view engine', 'ejs')
 // Schema Setup
 const campgroundSchema = new mongoose.Schema({
     name: String,
-    image: String
+    image: String,
+    description: String
 })
 
 // Complie into model
@@ -54,6 +55,10 @@ app.post("/campgrounds", (req, res) => {
             res.redirect("/campgrounds")
         }
     })
+})
+
+app.get("/campgrounds/:id", (req, res) => {
+    res.send("got it")
 })
 
 app.listen(port, () => {
