@@ -100,3 +100,29 @@ Find data ORDER BY
         SELECT column1, column2, ...
         FROM table_name
         ORDER BY column1, column2, ... ASC|DESC;
+
+ALT TABLE
+To add, delete or modify columns in an existing table
+        ALTER TABLE table_name
+        ADD column_name datatype;
+
+To drop column
+        ALTER TABLE table_name
+        DROP COLUMN column_name;
+
+Create Primary KEY
+        CREATE TABLE Persons (
+            ID int NOT NULL PRIMARY KEY,
+            LastName varchar(255) NOT NULL,
+            FirstName varchar(255),
+            Age int
+        );
+
+Foreign KEY
+        CREATE TABLE Orders (
+            OrderID int NOT NULL,
+            OrderNumber int NOT NULL,
+            PersonID int,
+            PRIMARY KEY (OrderID),
+            FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+        );
