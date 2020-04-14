@@ -2,6 +2,7 @@
 # Basic of javascript with method and functions.
 # Includes examples and explaination 
 
+FOR STUDY PURPOSE
 
 Javascript folder contain methods and trick that will see most of the time in interview and real world project.
 
