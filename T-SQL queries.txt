@@ -124,3 +124,6 @@ Foreign KEY
             OrderNumber int NOT NULL,
             PersonID int FOREIGN KEY REFERENCES Persons(PersonID)
         );
+
+        ALTER TABLE Orders
+        ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
