@@ -27,6 +27,7 @@ app.get("/", (req, res) => {
     res.redirect("/blogs")
 });
 
+// Index Route
 app.get("/blogs", (req, res) => {
     Blog.find({}, (err, blogs) => {
         if (err) {
@@ -37,6 +38,10 @@ app.get("/blogs", (req, res) => {
     })
 })
 
+// New Route
+app.get("/blogs/new", (req, res) => {
+    res.render("new")
+})
 app.listen(port, () => {
     console.log(`Server running at Port ${port}`)
 })
