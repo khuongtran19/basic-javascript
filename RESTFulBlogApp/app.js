@@ -42,6 +42,8 @@ app.get("/blogs", (req, res) => {
 app.get("/blogs/new", (req, res) => {
     res.render("new")
 })
+
+// Listen to asign port
 app.listen(port, () => {
     console.log(`Server running at Port ${port}`)
 })
