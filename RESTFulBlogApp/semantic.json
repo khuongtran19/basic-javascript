@@ -1,0 +1,23 @@
+{
+  "base": "semantic/",
+  "paths": {
+    "source": {
+      "config": "src/theme.config",
+      "definitions": "src/definitions/",
+      "site": "src/site/",
+      "themes": "src/themes/"
+    },
+    "output": {
+      "packaged": " /",
+      "uncompressed": " /components/",
+      "compressed": " /components/",
+      "themes": " /themes/"
+    },
+    "clean": "dist/"
+  },
+  "permission": false,
+  "autoInstall": false,
+  "rtl": false,
+  "components": ["reset", "site", "flag", "rail", "reveal", "segment", "step", "breadcrumb", "form", "message", "table", "ad", "feed", "item", "statistic", "accordion", "dimmer", "dropdown", "embed", "modal", "nag", "rating", "shape", "tab", "transition"],
+  "version": "2.4.2"
+}
