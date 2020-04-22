@@ -1,0 +1,17 @@
+// List all data in collection
+<name of Schema collection>.find()
+
+// Create new data
+<name of Schema collection>.create()
+
+// Get data by ID
+<name of Schema collection>.findById()
+
+// Show edit follow ID
+<name of Schema collection>.findById()
+
+// Update by ID
+<name of Schema collection>.findByIdAndUpdate()
+
+// Delete by ID
+<name of Schema collection>.findByIdAndRemove()
