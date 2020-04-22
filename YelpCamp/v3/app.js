@@ -5,9 +5,11 @@ const express = require("express"),
     mongoose = require("mongoose"),
     port = parseInt(process.env.APP_PORT || 3000),
     Campground = require("./models/campground"),
-    Comment = require("./models/comment"),
-    User = require("./models/user")
+    // Comment = require("./models/comment"),
+    // User = require("./models/user"),
+    seedDB = require("./seeds")
 
+seedDB();
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 mongoose.connect("mongodb://localhost/yelp_camp", { useFindAndModify: false });
