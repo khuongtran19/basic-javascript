@@ -14,11 +14,11 @@ router.get("/", (req, res) => {
     })
 })
 
-router.get("/news", (req, res) => {
+router.get("/news", isLoggedIn, (req, res) => {
     res.render("campgrounds/news")
 })
 
-router.post("/", (req, res) => {
+router.post("/", isLoggedIn, (req, res) => {
     const name = req.body.name,
         image = req.body.image,
         description = req.body.description;
@@ -45,5 +45,13 @@ router.get("/:id", (req, res) => {
         }
     })
 })
+
+// middleware
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect("/login")
+}
 
 module.exports = router
