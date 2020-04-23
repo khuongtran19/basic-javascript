@@ -5,7 +5,7 @@ const express = require("express"),
     mongoose = require("mongoose"),
     port = parseInt(process.env.APP_PORT || 3000),
     Campground = require("./models/campground"),
-    // Comment = require("./models/comment"),
+    Comment = require("./models/comment"),
     // User = require("./models/user"),
     seedDB = require("./seeds")
 
@@ -17,6 +17,7 @@ mongoose.connect("mongodb://localhost/yelp_camp", { useFindAndModify: false });
 app.use(bodyParser.urlencoded({ extended: true }))
 dotenv.config();
 app.set('view engine', 'ejs')
+app.use(express.static(__dirname + "/public"))
 
 app.get("/", (req, res) => {
     res.render("landing")
@@ -28,13 +29,13 @@ app.get("/campgrounds", (req, res) => {
         if (err) {
             console.log(err)
         } else {
-            res.render("index.ejs", { campgrounds: allCampgrounds })
+            res.render("campgrounds/index", { campgrounds: allCampgrounds })
         }
     })
 })
 
 app.get("/campgrounds/news", (req, res) => {
-    res.render("news.ejs")
+    res.render("campgrounds/news")
 })
 
 app.post("/campgrounds", (req, res) => {
@@ -60,9 +61,47 @@ app.get("/campgrounds/:id", (req, res) => {
             console.log(err)
         } else {
             console.log(foundCampground)
-            res.render("show", { campground: foundCampground })
+            res.render("campgrounds/show", { campground: foundCampground })
         }
     })
+})
+
+// ====================
+// Comments routes
+// ====================
+
+app.get("/campgrounds/:id/comments/new", (req, res) => {
+    // find campground by id
+    Campground.findById(req.params.id, (err, campground) => {
+        if (err) {
+            console.log(err)
+        } else {
+            res.render("comments/new", { campground: campground })
+        }
+    })
+})
+
+app.post("/campgrounds/:id/comments", (req, res) => {
+    // lookup campground using ID
+    Campground.findById(req.params.id, (err, campground) => {
+        if (err) {
+            console.log(err)
+            res.redirect("/campgrounds");
+        } else {
+            Comment.create(req.body.comment, (err, comment) => {
+                if (err) {
+                    console.log(err)
+                } else {
+                    campground.comments.push(comment)
+                    campground.save()
+                    res.redirect("/campgrounds/" + campground._id)
+                }
+            })
+        }
+    })
+    // create new comment
+    // connect new comment to campground
+    // redirect campground show page
 })
 
 app.listen(port, () => {
