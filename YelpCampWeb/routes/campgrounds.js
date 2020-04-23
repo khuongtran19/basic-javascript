@@ -50,6 +50,12 @@ router.get("/:id", (req, res) => {
     })
 })
 
+// Edit campground route
+router.get("/edit", (req, res) => {
+    res.render("/campgrounds/edit")
+})
+// Update campground route
+
 // middleware
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
