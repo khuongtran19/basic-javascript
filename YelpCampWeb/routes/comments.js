@@ -48,6 +48,28 @@ router.post("/", (req, res) => {
     // redirect campground show page
 })
 
+// Comment edit route
+router.get("/:comment_id/edit", (req, res) => {
+    Comment.findById(req.params.comment_id, (err, foundComment) => {
+        if (err) {
+            res.redirect("back")
+        } else {
+            res.render("comments/edit", { campground_id: req.params.id, comment: foundComment })
+        }
+    })
+})
+
+// Comment update route
+router.put("/:comment_id", (req, res) => {
+    Comment.findByIdAndUpdate(req.params.comment_id, req.body.comment, (err, updatedComment) => {
+        if (err) {
+            res.redirect("back")
+        } else {
+            res.redirect("/campgrounds/" + req.params.id)
+        }
+    })
+})
+
 // middleware
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
