@@ -2,9 +2,15 @@
 
 command line in terminal for heroku deployment
 
-heroku login    <==== this line will ask for login credentials like email and password
+heroku login              <==== this line will ask for login credentials like email and password
 
-heroku create   <==== this line will create space on heroku and url domain
+heroku create             <==== this line will create space on heroku and url domain
+
+git remove                <==== show repo
+
+git push heroku master    <==== upload to repo
+
+heroku logs               <==== show error or anything that make website crashing
 
 press "q" to quit the heroku in the terminal
 
