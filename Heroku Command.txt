@@ -1,6 +1,11 @@
 ------------Begin-----------
 
-command line in terminal for heroku deployment
+Before start to upload to heroku go to package.json add line
+"scripts":{
+    "start": "node index.js"  <==== this will auto start the app on heroku
+}
+
+command line in terminal for heroku deployment 
 
 heroku login              <==== this line will ask for login credentials like email and password
 
