@@ -1,0 +1,8 @@
+------------Begin-----------
+
+command line in terminal for heroku deployment
+
+heroku login -i     <==== this line will ask for login credentials like email and password
+
+press "q" to quit the heroku in the terminal
+
