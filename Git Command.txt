@@ -58,3 +58,7 @@
     + Usually use before git checkout to return specific commit
 git log
 
+-git revert
+    + Revert everythingfrom the HEAD back to the commit hash
+git revert --no-commit <:commit_id:>..HEAD
+
