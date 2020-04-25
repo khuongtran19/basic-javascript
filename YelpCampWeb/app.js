@@ -1,5 +1,6 @@
 const express = require("express"),
     bodyParser = require("body-parser"),
+    dotenv = require("dotenv"),
     mongoose = require("mongoose"),
     flash = require("connect-flash"),
     passport = require("passport"),
@@ -9,16 +10,22 @@ const express = require("express"),
     commentRoutes = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index"),
-    port = parseInt(process.env.APP_PORT || 3000),
     session = require("express-session"),
+    port = parseInt(process.env.APP_PORT || 3000),
     app = express();
 
-mongoose.connect("mongodb://localhost/yelp_camp",
+dotenv.config();
+mongoose.connect("mongodb+srv://khuongtran19:kevintran502438@cluster0-cc0p2.mongodb.net/test?retryWrites=true&w=majority",
     {
         useFindAndModify: false,
         useNewUrlParser: true,
-        useUnifiedTopology: true
-    });
+        useUnifiedTopology: true,
+        useCreateIndex: true
+    }).then(() => {
+        console.log("Connected to DB")
+    }).catch(err => {
+        console.log("ERROR", err.message)
+    })
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
