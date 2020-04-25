@@ -53,3 +53,8 @@
     + To check what remote/source you have or add a new remote.
  git remote to check and list. And git remote add <:remote_url:>
 
+-git log
+    + To check all previous git commit
+    + Usually use before git checkout to return specific commit
+git log
+
