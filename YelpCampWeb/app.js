@@ -11,11 +11,11 @@ const express = require("express"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index"),
     session = require("express-session"),
-    port = parseInt(process.env.APP_PORT || 3000),
+    port = parseInt(process.env.PORT || 5000),
     app = express();
 
 dotenv.config();
-mongoose.connect("mongodb+srv://khuongtran19:kevintran502438@cluster0-cc0p2.mongodb.net/test?retryWrites=true&w=majority",
+mongoose.connect(process.env.MONGODB_URI,
     {
         useFindAndModify: false,
         useNewUrlParser: true,
@@ -35,7 +35,7 @@ app.use(flash());
 // seedDB(); //seed the database
 
 // PASSPORT CONFIGURATION
-app.use(session({
+app.use(require("cookie-session")({
     secret: "Once again Rusty wins cutest dog!",
     resave: false,
     saveUninitialized: false
@@ -58,6 +58,6 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
 
-app.listen(port, function () {
-    console.log("The YelpCamp Server Has Started!");
+app.listen(port, process.env.IP, function () {
+    console.log("The YelpCamp Server Has Stated");
 });
